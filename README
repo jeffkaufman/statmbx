@@ -1,0 +1,30 @@
+Summary:
+
+  statmbx allows you to see what unread messages you have in your
+  mailbox without opening an email client.  It is written in C and
+  runs as quickly as is possible without indexing.  Compatible with
+  mutt, pine, and any other mail program storing messages in the mbox
+  format: http://www.jwz.org/doc/content-length.html
+
+Usage:
+
+  $ cat ~/.statmbx
+  [events] mail/events
+  [main] .mail
+  [folder_with_no_new_messages] mail/somembox
+  #[folder_not_to_check_right_now] mail/someothermbox
+  $ statmbx
+
+  [events]
+    Jane Doe                     Re: [FOOLIST] Movies this evening?
+    Ignatz Miller                [BARLIST] Gaming this Sunday!
+
+  [main]
+    Mike Smith                   long list, poorly organized
+  $ statmbx --only-names
+  [events] [main]
+  
+Installation:
+
+  $ gcc -o statmbx statmbx.c
+  $ cp statmbx somewhere-on-your-path
