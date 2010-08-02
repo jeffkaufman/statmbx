@@ -23,6 +23,19 @@ Usage:
     Mike Smith                   long list, poorly organized
   $ statmbx --only-names
   [events] [main]
+
+To get rid of the square brackets, don't include them in ~/.statmbx.
+I just like the way they look.
+
+If you don't want headers to show bold, perhaps because your terminal
+doesn't do escape sequences, disable that by changing STATMBX_DO_BOLD
+from 1 to 0 in statmbx.c and recompiling.
+
+If this runs too slowly for you, you probably have too many messages
+in the folders you want to check.  You could either switch to
+something that uses indexing and caching, or you could move old
+messages to some archive folder that you can then not check for new
+mail.  I do the latter.
   
 Installation:
 
