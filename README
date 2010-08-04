@@ -6,6 +6,10 @@ Summary:
   mutt, pine, and any other mail program storing messages in the mbox
   format: http://www.jwz.org/doc/content-length.html
 
+License:
+
+  GPL v2 or later.  See the included file COPYING.
+
 Usage:
 
   $ cat ~/.statmbx
